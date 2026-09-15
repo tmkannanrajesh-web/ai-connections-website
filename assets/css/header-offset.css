@@ -5,3 +5,7 @@
 html {
 scroll-padding-top: var(--header-offset);
 }
+
+section {
+scroll-margin-top: var(--header-offset);
+}
