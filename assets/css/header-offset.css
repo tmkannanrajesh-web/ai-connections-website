@@ -5,7 +5,3 @@
 html {
 scroll-padding-top: var(--header-offset);
 }
-
-[id] {
-scroll-margin-top: var(--header-offset);
-}
