@@ -6,6 +6,6 @@ html {
 scroll-padding-top: var(--header-offset);
 }
 
-:where(section, h1, h2, h3, h4, h5, h6)[id] {
+[id]:not(input):not(select):not(textarea):not(option):not(button):not(form) {
 scroll-margin-top: var(--header-offset);
 }
