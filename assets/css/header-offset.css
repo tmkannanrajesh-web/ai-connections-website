@@ -6,6 +6,6 @@ html {
 scroll-padding-top: var(--header-offset);
 }
 
-section {
+:target {
 scroll-margin-top: var(--header-offset);
 }
