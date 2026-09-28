@@ -1,297 +1,749 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Connections | Enterprise Transformation</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-aicNavy: '#003B73',
-aicInk: '#132945',
-aicMist: '#edf3f8',
-aicLine: '#d8e2ec',
-aicRed: '#c53636'
-},
-fontFamily: {
-sans: ['Inter', 'sans-serif']
-},
-boxShadow: {
-panel: '0 18px 50px rgba(11, 31, 59, 0.08)'
-}
-}
-}
-};
-</script>
-<style>
-html {
-scroll-padding-top: 7rem;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-font-family: 'Inter', sans-serif;
-}
+  <title>AI Connections | Enterprise Transformation</title>
 
-section[id] {
-scroll-margin-top: 7rem;
-}
-</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            aicNavy: '#003B73',
+            aicInk: '#132945',
+            aicMist: '#edf3f8',
+            aicLine: '#d8e2ec',
+            aicRed: '#c53636'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            panel: '0 18px 50px rgba(11, 31, 59, 0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-padding-top: 7rem;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    section[id] {
+      scroll-margin-top: 7rem;
+    }
+  </style>
 </head>
+
 <body class="bg-white text-slate-800 antialiased">
-<header class="fixed inset-x-0 top-0 z-50 border-b border-aicLine/80 bg-white/95 backdrop-blur">
-<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-<a href="#top" class="flex items-center gap-3">
-<img src="assets/images/brand/aic-logo-official.png" alt="AI Connections logo" class="h-20 w-auto">
-</a>
-<nav class="hidden items-center gap-7 text-sm font-medium text-slate-600 lg:flex">
-<a href="#hero" class="transition hover:text-aicNavy">Home</a>
-<a href="#what-we-do" class="transition hover:text-aicNavy">What We Do</a>
-<a href="#intelligent-products" class="transition hover:text-aicNavy">Products</a>
-<a href="#transformation-approach" class="transition hover:text-aicNavy">Approach</a>
-<a href="#international-presence" class="transition hover:text-aicNavy">Presence</a>
-<a href="#insights" class="transition hover:text-aicNavy">Insights</a>
-<a href="contact.html" class="rounded-full bg-aicNavy px-5 py-2.5 text-white transition hover:bg-aicInk">Talk to an Expert</a>
- </nav>
-<details class="lg:hidden">
-<summary class="cursor-pointer list-none rounded-full border border-aicLine px-4 py-2 text-sm font-semibold text-aicNavy">Menu</summary>
-<div class="absolute right-4 top-[4.5rem] w-64 rounded-2xl border border-aicLine bg-white p-4 shadow-panel sm:right-6">
-<nav class="flex flex-col gap-3 text-sm font-medium text-slate-700">
-<a href="#hero">Home</a>
-<a href="#what-we-do">What We Do</a>
-<a href="#intelligent-products">Products</a>
-<a href="#transformation-approach">Approach</a>
-<a href="#international-presence">Presence</a>
-<a href="#insights">Insights</a>
-<a href="contact.html" class="mt-2 rounded-full bg-aicNavy px-4 py-2 text-center text-white">Talk to an Expert</a>
-</nav>
-</div>
-</details>
-</div>
-</header>
 
-<main id="top" class="pt-24">
-<section id="hero" class="border-b border-aicLine bg-gradient-to-b from-aicMist to-white">
-<div class="mx-auto grid max-w-7xl gap-14 px-4 py-20 sm:px-6 md:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] lg:px-8">
-<div class="space-y-8">
-<div class="space-y-5">
-<p class="text-3xl font-extrabold uppercase tracking-[0.2em] text-aicNavy md:text-[2rem]">AI CONNECTIONS</p>
-<h1 class="max-w-3xl text-5xl font-bold tracking-tight text-aicNavy sm:text-6xl lg:text-7xl">AI. Transformation.</h1>
-<p class="max-w-2xl text-lg leading-8 text-slate-600">Transforming enterprises through AI, deep banking expertise and modern technology.</p>
-</div>
-<div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-<a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-aicNavy px-6 py-3 text-sm font-semibold text-white transition hover:bg-aicInk">Talk to an Expert</a>
-<a href="#what-we-do" class="inline-flex items-center justify-center rounded-full border border-aicLine bg-white px-6 py-3 text-sm font-semibold text-aicNavy transition hover:border-aicNavy">Explore Banking</a>
-<a href="services.html" class="inline-flex items-center justify-center rounded-full border border-aicLine bg-white px-6 py-3 text-sm font-semibold text-aicNavy transition hover:border-aicNavy">Explore AI Consulting</a>
-</div>
-</div>
-<div class="rounded-[2rem] border border-aicLine bg-white p-8 shadow-panel sm:p-10">
-<div class="space-y-6">
-<div class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-aicRed">
-<div class="h-px flex-1 bg-aicLine"></div>
-<span>Transformation Thesis</span>
-<div class="h-px flex-1 bg-aicLine"></div>
-</div>
-<p class="text-2xl font-semibold leading-9 text-aicNavy">Enterprise transformation requires domain, technology and execution discipline in equal measure.</p>
-<p class="border-l border-aicLine pl-5 text-base leading-8 text-slate-600">AI Connections operates at that intersection, helping leadership teams translate transformation ambition into reliable outcomes.</p>
-</div>
-</div>
-</div>
-</section>
+  <!-- NAVIGATION -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-aicLine/80 bg-white/95 backdrop-blur">
 
-<section id="what-we-do" class="border-b border-aicLine bg-white py-20">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="mb-12 flex flex-col gap-4 border-b border-aicLine pb-8 lg:flex-row lg:items-end lg:justify-between">
-<div>
-<p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">What We Do</p>
-<h2 class="mt-3 text-3xl font-bold text-aicNavy sm:text-4xl">Integrated capabilities for enterprise transformation.</h2>
-</div>
-<p class="max-w-2xl text-base leading-8 text-slate-600">A unified model across banking, AI consulting and enterprise technology services.</p>
-</div>
-<div class="grid gap-6 lg:grid-cols-3">
-<article class="flex h-full flex-col justify-between rounded-[1.75rem] border border-aicLine bg-aicMist/45 p-8">
-<div class="space-y-4">
-<p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-<h3 class="text-2xl font-semibold text-aicNavy">Banking</h3>
-<p class="text-base leading-8 text-slate-600">Domain-led transformation support across core platform modernization, AI adoption and digital execution.</p>
-</div>
-</article>
-<article class="flex h-full flex-col justify-between rounded-[1.75rem] border border-aicLine bg-white p-8 shadow-panel">
-<div class="space-y-4">
-<p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-<h3 class="text-2xl font-semibold text-aicNavy">AI Consulting</h3>
-<p class="text-base leading-8 text-slate-600">Enterprise advisory and delivery for strategy, generative AI, intelligent automation and scaled intelligence.</p>
-</div>
-</article>
-<article class="flex h-full flex-col justify-between rounded-[1.75rem] border border-aicLine bg-aicMist/45 p-8">
-<div class="space-y-4">
-<p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-<h3 class="text-2xl font-semibold text-aicNavy">Enterprise Technology</h3>
-<p class="text-base leading-8 text-slate-600">Temenos • SAP • Salesforce • Enterprise Integration • Cybersecurity.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
 
-<section id="intelligent-products" class="border-b border-aicLine bg-aicNavy py-20 text-white">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="mb-12 border-b border-white/15 pb-8">
-<h2 class="text-3xl font-bold uppercase tracking-[0.14em] sm:text-4xl">INTELLIGENT PRODUCTS</h2>
-<p class="mt-3 text-lg text-white/75">Intelligent solution portfolio.</p>
-</div>
-<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-<article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-8">
-<p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Product 01</p>
-<h3 class="mt-8 text-3xl font-semibold">Catch IQ</h3> 
-<p class="mt-3 text-base leading-7 text-white/75">AI Fishing Decision Intelligence</p>
-</article>
-<article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-8">
-<p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Product 02</p>
-<h3 class="mt-8 text-3xl font-semibold">Verify / KYC</h3>
- <p class="mt-3 text-base leading-7 text-white/75">AI-Powered KYC & Customer Identity Intelligence</p>
-</article>
-<article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-8">
-<p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Product 03</p>
-<h3 class="mt-8 text-3xl font-semibold">IntelliSight</h3>
-<p class="mt-3 text-base leading-7 text-white/75">AI-Powered Enterprise Asset Intelligence Platform</p>
-</article>
-</div>
-</div>
-</section>
+      <a href="#top" class="flex items-center gap-3">
+        <img
+          src="assets/images/brand/aic-logo-official.png"
+          alt="AI Connections logo"
+          class="h-20 w-auto"
+        >
+      </a>
 
-<section id="transformation-approach" class="border-b border-aicLine bg-white py-20">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="mb-12 flex flex-col gap-4 border-b border-aicLine pb-8 lg:flex-row lg:items-end lg:justify-between">
-<div>
-<p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">Transformation Approach</p>
-<h2 class="mt-3 text-3xl font-bold text-aicNavy sm:text-4xl">A connected transformation framework.</h2>
-</div>
-</div>
-<div class="rounded-[2rem] border border-aicLine bg-aicMist/45 p-6 sm:p-8">
-  <div class="flex flex-col gap-3 md:flex-row md:items-stretch">
-    <div class="flex-1 rounded-2xl bg-aicNavy p-6 text-white">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">01</p>
-      <h3 class="mt-3 text-xl font-bold">Strategy</h3>
-      <p class="mt-2 text-sm leading-6 text-white/75">Define the ambition.</p>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-slate-600 lg:flex">
+
+        <a href="#hero" class="transition hover:text-aicNavy">
+          Home
+        </a>
+
+        <a href="#what-we-do" class="transition hover:text-aicNavy">
+          What We Do
+        </a>
+
+        <a href="#intelligent-products" class="transition hover:text-aicNavy">
+          Products
+        </a>
+
+        <a href="#transformation-approach" class="transition hover:text-aicNavy">
+          Approach
+        </a>
+
+        <a href="#international-presence" class="transition hover:text-aicNavy">
+          Presence
+        </a>
+
+        <a href="#insights" class="transition hover:text-aicNavy">
+          Insights
+        </a>
+
+        <a
+          href="contact.html"
+          class="rounded-full bg-aicNavy px-5 py-2.5 text-white transition hover:bg-aicInk"
+        >
+          Talk to an Expert
+        </a>
+
+      </nav>
+
+      <!-- MOBILE MENU -->
+      <details class="lg:hidden">
+
+        <summary class="cursor-pointer list-none rounded-full border border-aicLine px-4 py-2 text-sm font-semibold text-aicNavy">
+          Menu
+        </summary>
+
+        <div class="absolute right-4 top-[4.5rem] w-64 rounded-2xl border border-aicLine bg-white p-4 shadow-panel sm:right-6">
+
+          <nav class="flex flex-col gap-3 text-sm font-medium text-slate-700">
+
+            <a href="#hero">Home</a>
+            <a href="#what-we-do">What We Do</a>
+            <a href="#intelligent-products">Products</a>
+            <a href="#transformation-approach">Approach</a>
+            <a href="#international-presence">Presence</a>
+            <a href="#insights">Insights</a>
+
+            <a
+              href="contact.html"
+              class="mt-2 rounded-full bg-aicNavy px-4 py-2 text-center text-white"
+            >
+              Talk to an Expert
+            </a>
+
+          </nav>
+
+        </div>
+
+      </details>
+
+    </div>
+  </header>
+
+
+  <main id="top" class="pt-24">
+
+
+    <!-- HERO -->
+    <section
+      id="hero"
+      class="border-b border-aicLine bg-gradient-to-b from-aicMist to-white"
+    >
+
+      <div
+        class="mx-auto grid max-w-7xl gap-14 px-4 py-20 sm:px-6 md:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] lg:px-8"
+      >
+
+        <div class="space-y-8">
+
+          <div class="space-y-5">
+
+            <p class="text-3xl font-extrabold uppercase tracking-[0.2em] text-aicNavy md:text-[2rem]">
+              AI CONNECTIONS
+            </p>
+
+            <h1 class="max-w-3xl text-5xl font-bold tracking-tight text-aicNavy sm:text-6xl lg:text-7xl">
+              AI. Transformation.
+            </h1>
+
+            <p class="max-w-2xl text-lg leading-8 text-slate-600">
+              Transforming enterprises through AI, deep banking expertise and modern technology.
+            </p>
+
+          </div>
+
+
+          <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center rounded-full bg-aicNavy px-6 py-3 text-sm font-semibold text-white transition hover:bg-aicInk"
+            >
+              Talk to an Expert
+            </a>
+
+            <a
+              href="#what-we-do"
+              class="inline-flex items-center justify-center rounded-full border border-aicLine bg-white px-6 py-3 text-sm font-semibold text-aicNavy transition hover:border-aicNavy"
+            >
+              Explore Banking
+            </a>
+
+            <a
+              href="services.html"
+              class="inline-flex items-center justify-center rounded-full border border-aicLine bg-white px-6 py-3 text-sm font-semibold text-aicNavy transition hover:border-aicNavy"
+            >
+              Explore AI Consulting
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- TRANSFORMATION THESIS -->
+
+        <div class="rounded-[2rem] border border-aicLine bg-white p-8 shadow-panel sm:p-10">
+
+          <div class="space-y-6">
+
+            <div class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-aicRed">
+
+              <div class="h-px flex-1 bg-aicLine"></div>
+
+              <span>Transformation Thesis</span>
+
+              <div class="h-px flex-1 bg-aicLine"></div>
+
+            </div>
+
+            <p class="text-2xl font-semibold leading-9 text-aicNavy">
+              Enterprise transformation requires domain, technology and execution discipline in equal measure.
+            </p>
+
+            <p class="border-l border-aicLine pl-5 text-base leading-8 text-slate-600">
+              AI Connections operates at that intersection, helping leadership teams translate transformation ambition into reliable outcomes.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT WE DO -->
+    <section
+      id="what-we-do"
+      class="border-b border-aicLine bg-white py-20"
+    >
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 flex flex-col gap-4 border-b border-aicLine pb-8 lg:flex-row lg:items-end lg:justify-between">
+
+          <div>
+
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
+              What We Do
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold text-aicNavy sm:text-4xl">
+              Integrated capabilities for enterprise transformation.
+            </h2>
+
+          </div>
+
+          <p class="max-w-2xl text-base leading-8 text-slate-600">
+            A unified model across banking, AI consulting and enterprise technology services.
+          </p>
+
+        </div>
+
+
+        <div class="grid gap-6 lg:grid-cols-3">
+
+          <article class="flex h-full flex-col justify-between rounded-[1.75rem] border border-aicLine bg-aicMist/45 p-8">
+
+            <div class="space-y-4">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">
+                Capability
+              </p>
+
+              <h3 class="text-2xl font-semibold text-aicNavy">
+                Banking
+              </h3>
+
+              <p class="text-base leading-8 text-slate-600">
+                Domain-led transformation support across core platform modernization, AI adoption and digital execution.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="flex h-full flex-col justify-between rounded-[1.75rem] border border-aicLine bg-white p-8 shadow-panel">
+
+            <div class="space-y-4">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">
+                Capability
+              </p>
+
+              <h3 class="text-2xl font-semibold text-aicNavy">
+                AI Consulting
+              </h3>
+
+              <p class="text-base leading-8 text-slate-600">
+                Enterprise advisory and delivery for strategy, generative AI, intelligent automation and scaled intelligence.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="flex h-full flex-col justify-between rounded-[1.75rem] border border-aicLine bg-aicMist/45 p-8">
+
+            <div class="space-y-4">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">
+                Capability
+              </p>
+
+              <h3 class="text-2xl font-semibold text-aicNavy">
+                Enterprise Technology
+              </h3>
+
+              <p class="text-base leading-8 text-slate-600">
+                Temenos • SAP • Salesforce • Enterprise Integration • Cybersecurity.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTELLIGENT PRODUCTS -->
+    <section
+      id="intelligent-products"
+      class="border-b border-aicLine bg-aicNavy py-20 text-white"
+    >
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 border-b border-white/15 pb-8">
+
+          <h2 class="text-3xl font-bold uppercase tracking-[0.14em] sm:text-4xl">
+            INTELLIGENT PRODUCTS
+          </h2>
+
+          <p class="mt-3 text-lg text-white/75">
+            Intelligent solution portfolio.
+          </p>
+
+        </div>
+
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+
+          <article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-8">
+
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
+              Product 01
+            </p>
+
+            <h3 class="mt-8 text-3xl font-semibold">
+              Catch IQ
+            </h3>
+
+            <p class="mt-3 text-base leading-7 text-white/75">
+              AI Fishing Decision Intelligence
+            </p>
+
+          </article>
+
+
+          <article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-8">
+
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
+              Product 02
+            </p>
+
+            <h3 class="mt-8 text-3xl font-semibold">
+              Verify / KYC
+            </h3>
+
+            <p class="mt-3 text-base leading-7 text-white/75">
+              AI-Powered KYC & Customer Identity Intelligence
+            </p>
+
+          </article>
+
+
+          <article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-8">
+
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
+              Product 03
+            </p>
+
+            <h3 class="mt-8 text-3xl font-semibold">
+              IntelliSight
+            </h3>
+
+            <p class="mt-3 text-base leading-7 text-white/75">
+              AI-Powered Enterprise Asset Intelligence Platform
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRANSFORMATION APPROACH -->
+    <section
+      id="transformation-approach"
+      class="border-b border-aicLine bg-white py-20"
+    >
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 flex flex-col gap-4 border-b border-aicLine pb-8">
+
+          <div>
+
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
+              Transformation Approach
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold text-aicNavy sm:text-4xl">
+              A connected transformation framework.
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="rounded-[2rem] border border-aicLine bg-aicMist/45 p-8 sm:p-10">
+
+          <div class="flex flex-col gap-4 text-center text-lg font-semibold text-aicNavy md:flex-row md:flex-wrap md:items-center md:justify-center md:text-xl">
+
+            <span class="rounded-full border border-aicLine bg-white px-6 py-4">
+              Strategy
+            </span>
+
+            <span class="hidden text-aicRed md:inline">
+              →
+            </span>
+
+            <span class="rounded-full border border-aicLine bg-white px-6 py-4">
+              Design
+            </span>
+
+            <span class="hidden text-aicRed md:inline">
+              →
+            </span>
+
+            <span class="rounded-full border border-aicLine bg-white px-6 py-4">
+              Transform
+            </span>
+
+            <span class="hidden text-aicRed md:inline">
+              →
+            </span>
+
+            <span class="rounded-full border border-aicLine bg-white px-6 py-4">
+              Intelligent
+            </span>
+
+            <span class="hidden text-aicRed md:inline">
+              →
+            </span>
+
+            <span class="rounded-full border border-aicLine bg-white px-6 py-4">
+              Optimize
+            </span>
+
+          </div>
+
+          <p class="mt-8 text-center text-sm font-medium uppercase tracking-[0.24em] text-slate-500">
+            Strategy → Design → Transform → Intelligent → Optimize
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTERNATIONAL PRESENCE -->
+    <section
+      id="international-presence"
+      class="border-b border-aicLine bg-aicMist/45 py-20"
+    >
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 border-b border-aicLine pb-8">
+
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
+            International Presence
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold text-aicNavy sm:text-4xl">
+            Global delivery network.
+          </h2>
+
+        </div>
+
+
+        <!-- ONE LARGE BOX CONTAINING ALL FOUR REGIONS -->
+
+        <div class="overflow-hidden rounded-[2rem] border border-aicLine bg-white shadow-panel">
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4">
+
+
+            <!-- INDIA -->
+
+            <article class="border-b border-aicLine p-8 md:border-r lg:border-b-0 sm:p-10">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">
+                01
+              </p>
+
+              <h3 class="mt-6 text-2xl font-semibold text-aicNavy">
+                India
+              </h3>
+
+              <p class="mt-4 text-base leading-8 text-slate-600">
+                Enterprise delivery and transformation leadership.
+              </p>
+
+            </article>
+
+
+            <!-- MIDDLE EAST -->
+
+            <article class="border-b border-aicLine p-8 lg:border-b-0 lg:border-r sm:p-10">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">
+                02
+              </p>
+
+              <h3 class="mt-6 text-2xl font-semibold text-aicNavy">
+                Middle East
+              </h3>
+
+              <p class="mt-4 text-base leading-8 text-slate-600">
+                Banking and modernization collaborations for regional institutions.
+              </p>
+
+            </article>
+
+
+            <!-- EUROPE -->
+
+            <article class="border-b border-aicLine p-8 md:border-r lg:border-b-0 sm:p-10">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">
+                03
+              </p>
+
+              <h3 class="mt-6 text-2xl font-semibold text-aicNavy">
+                Europe
+              </h3>
+
+              <p class="mt-4 text-base leading-8 text-slate-600">
+                AI consulting and enterprise technology transformation engagements.
+              </p>
+
+            </article>
+
+
+            <!-- AMERICAS -->
+
+            <article class="p-8 sm:p-10">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">
+                04
+              </p>
+
+              <h3 class="mt-6 text-2xl font-semibold text-aicNavy">
+                Americas
+              </h3>
+
+              <p class="mt-4 text-base leading-8 text-slate-600">
+                Scalable AI and modernization support for growth-focused enterprises.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INSIGHTS -->
+    <section
+      id="insights"
+      class="border-b border-aicLine bg-white py-20"
+    >
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 border-b border-aicLine pb-8">
+
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
+            Insights
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold text-aicNavy sm:text-4xl">
+            Executive perspectives for enterprise change.
+          </h2>
+
+        </div>
+
+
+        <div class="grid gap-8 lg:grid-cols-3">
+
+
+          <article class="border-t border-aicNavy pt-6">
+
+            <h3 class="text-2xl font-semibold text-aicNavy">
+              Banking Transformation
+            </h3>
+
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Program sequencing, control models and operating transformations for banks.
+            </p>
+
+          </article>
+
+
+          <article class="border-t border-aicNavy pt-6">
+
+            <h3 class="text-2xl font-semibold text-aicNavy">
+              AI & Enterprise Intelligence
+            </h3>
+
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Practical pathways from AI ambition to measurable enterprise value.
+            </p>
+
+          </article>
+
+
+          <article class="border-t border-aicNavy pt-6">
+
+            <h3 class="text-2xl font-semibold text-aicNavy">
+              Technology Transformation
+            </h3>
+
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Architecture, integration and platform decisions for resilient enterprise change.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="bg-aicNavy py-20 text-white">
+
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+
+        <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">
+          Let’s transform what’s next.
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">
+          AI Connections helps global enterprises move from transformation intent to sustained outcomes.
+        </p>
+
+        <a
+          href="contact.html"
+          class="mt-10 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-aicNavy transition hover:bg-aicMist"
+        >
+          Start a Conversation
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-[#081528] py-10 text-white">
+
+    <div class="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
+
+      <div>
+
+        <img
+          src="assets/images/brand/aic-logo-official.png"
+          alt="AI Connections logo"
+          class="h-10 w-auto"
+        >
+
+        <p class="mt-4 max-w-md text-sm leading-7 text-white/65">
+          AI Connections delivers enterprise transformation through banking expertise, AI consulting and modern technology execution.
+        </p>
+
+      </div>
+
+
+      <div class="space-y-2 text-sm text-white/65">
+
+        <p>
+          <a
+            href="mailto:Rajesh@aiconnections.com"
+            class="transition hover:text-white"
+          >
+            Rajesh@aiconnections.com
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="tel:+919841940011"
+            class="transition hover:text-white"
+          >
+            +91 9841940011
+          </a>
+        </p>
+
+        <p>
+          © 2026 AI Connections. All rights reserved.
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="flex items-center justify-center text-2xl font-semibold text-aicRed md:w-8 md:text-3xl">→</div>
+  </footer>
 
-    <div class="flex-1 rounded-2xl bg-[#164d82] p-6 text-white">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">02</p>
-      <h3 class="mt-3 text-xl font-bold">Design</h3>
-      <p class="mt-2 text-sm leading-6 text-white/75">Shape the solution.</p>
-    </div>
-
-    <div class="flex items-center justify-center text-2xl font-semibold text-aicRed md:w-8 md:text-3xl">→</div>
-
-    <div class="flex-1 rounded-2xl bg-[#2b6498] p-6 text-white">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">03</p>
-      <h3 class="mt-3 text-xl font-bold">Transform</h3>
-      <p class="mt-2 text-sm leading-6 text-white/75">Execute the change.</p>
-    </div>
-
-    <div class="flex items-center justify-center text-2xl font-semibold text-aicRed md:w-8 md:text-3xl">→</div>
-
-    <div class="flex-1 rounded-2xl bg-[#5d8fb5] p-6 text-white">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">04</p>
-      <h3 class="mt-3 text-xl font-bold">Intelligent</h3>
-      <p class="mt-2 text-sm leading-6 text-white/80">Activate AI &amp; intelligence.</p>
-    </div>
-
-    <div class="flex items-center justify-center text-2xl font-semibold text-aicRed md:w-8 md:text-3xl">→</div>
-
-    <div class="flex-1 rounded-2xl bg-aicMist p-6 text-aicNavy">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">05</p>
-      <h3 class="mt-3 text-xl font-bold">Optimize</h3>
-      <p class="mt-2 text-sm leading-6 text-slate-600">Continuously improve.</p>
-    </div>
-  </div>
-
-  <p class="mt-8 text-center text-sm font-medium text-slate-500">
-    From strategic intent to intelligent execution and continuous optimization.
-  </p>
-</div>
-</div>
-</section>
-
-<section id="international-presence" class="border-b border-aicLine bg-aicMist/45 py-20">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="mb-12 border-b border-aicLine pb-8">
-<h2 class="text-3xl font-bold uppercase tracking-[0.14em] text-aicNavy sm:text-4xl">INTERNATIONAL PRESENCE</h2>
-<p class="mt-3 text-lg text-slate-600">Global delivery network.</p>
-</div>
-<div class="grid gap-px overflow-hidden rounded-[2rem] border border-aicLine bg-aicLine md:grid-cols-2">
-<article class="bg-white p-8 sm:p-10">
-<h3 class="text-2xl font-semibold text-aicNavy">India</h3>
-<p class="mt-4 max-w-md text-base leading-8 text-slate-600">Enterprise delivery and transformation leadership.</p>
-</article>
-<article class="bg-white p-8 sm:p-10">
-<h3 class="text-2xl font-semibold text-aicNavy">Middle East</h3>
-<p class="mt-4 max-w-md text-base leading-8 text-slate-600">Banking and modernization collaborations for regional institutions.</p>
-</article>
-<article class="bg-white p-8 sm:p-10">
-<h3 class="text-2xl font-semibold text-aicNavy">Europe</h3>
-<p class="mt-4 max-w-md text-base leading-8 text-slate-600">AI consulting and enterprise technology transformation engagements.</p>
-</article>
-<article class="bg-white p-8 sm:p-10">
-<h3 class="text-2xl font-semibold text-aicNavy">Americas</h3>
-<p class="mt-4 max-w-md text-base leading-8 text-slate-600">Scalable AI and modernization support for growth-focused enterprises.</p>
-</article>
-</div>
-</div>
-</section>
-
-<section id="insights" class="border-b border-aicLine bg-white py-20">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="mb-12 border-b border-aicLine pb-8">
-<p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">Insights</p>
-<h2 class="mt-3 text-3xl font-bold text-aicNavy sm:text-4xl">Executive content architecture for sustained thought leadership.</h2>
-</div>
-<div class="grid gap-8 lg:grid-cols-3">
-<article class="border-t border-aicNavy pt-6">
-<h3 class="text-2xl font-semibold text-aicNavy">Banking Transformation</h3>
-<p class="mt-4 text-base leading-8 text-slate-600">Program sequencing, control models and operating transformations for banks.</p>
-</article>
-<article class="border-t border-aicNavy pt-6">
-<h3 class="text-2xl font-semibold text-aicNavy">AI &amp; Enterprise Intelligence</h3>
-<p class="mt-4 text-base leading-8 text-slate-600">Practical pathways from AI ambition to measurable enterprise value.</p>
-</article>
-<article class="border-t border-aicNavy pt-6">
-<h3 class="text-2xl font-semibold text-aicNavy">Technology Transformation</h3>
-<p class="mt-4 text-base leading-8 text-slate-600">Architecture, integration and platform decisions for resilient enterprise change.</p>
-</article>
-</div>
-</div>
-</section>
-
-<section class="bg-aicNavy py-20 text-white">
-<div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-<h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Let’s transform what’s next.</h2>
-<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">AI Connections helps global enterprises move from transformation intent to sustained outcomes.</p>
-<a href="contact.html" class="mt-10 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-aicNavy transition hover:bg-aicMist">Start a Conversation</a>
-</div>
-</section>
-</main>
-
-<footer class="border-t border-white/10 bg-[#081528] py-10 text-white">
-<div class="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
-<div>
-<img src="assets/images/brand/aic-logo-official.png" alt="AI Connections logo" class="h-10 w-auto">
-<p class="mt-4 max-w-md text-sm leading-7 text-white/65">AI Connections delivers enterprise transformation through banking expertise, AI consulting and modern technology execution.</p>
-</div>
-<div class="space-y-2 text-sm text-white/65">
-<p><a href="mailto:Rajesh@aiconnections.com" class="transition hover:text-white">Rajesh@aiconnections.com</a></p>
-<p><a href="tel:+919841940011" class="transition hover:text-white">+91 9841940011</a></p>
-<p>© 2026 AI Connections. All rights reserved.</p>
-</div>
-</div>
-</footer>
 </body>
 </html>
