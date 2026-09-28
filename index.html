@@ -11,7 +11,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <script>
     tailwind.config = {
@@ -20,57 +23,176 @@
           colors: {
             aicNavy: '#003B73',
             aicInk: '#132945',
-            aicMist: '#edf3f8',
-            aicLine: '#d8e2ec',
-            aicRed: '#c53636'
+            aicBlue: '#1769AA',
+            aicMist: '#F4F7FA',
+            aicLine: '#D8E2EC',
+            aicRed: '#C53636'
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif']
           },
           boxShadow: {
-            panel: '0 18px 50px rgba(11, 31, 59, 0.08)'
+            soft: '0 12px 35px rgba(11,31,59,.07)',
+            card: '0 20px 50px rgba(11,31,59,.09)'
           }
         }
       }
-    };
+    }
   </script>
 
   <style>
     html {
-      scroll-padding-top: 5rem;
+      scroll-padding-top: 80px;
     }
 
     body {
       font-family: 'Inter', sans-serif;
+      color: #132945;
+      overflow-x: hidden;
     }
 
     section[id] {
-      scroll-margin-top: 5rem;
+      scroll-margin-top: 80px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: #c53636;
+    }
+
+    .section-title {
+      color: #003B73;
+      font-weight: 700;
+      letter-spacing: -.025em;
+    }
+
+    .approach-line {
+      background: linear-gradient(
+        90deg,
+        #003B73 0%,
+        #1769AA 50%,
+        #C53636 100%
+      );
+    }
+
+    .approach-card {
+      position: relative;
+    }
+
+    .approach-card:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 42px;
+      right: -27px;
+      width: 54px;
+      height: 2px;
+      background: #c53636;
+      z-index: 2;
+    }
+
+    .approach-card:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      right: -28px;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #c53636;
+      border-right: 2px solid #c53636;
+      transform: rotate(45deg);
+      z-index: 3;
+    }
+
+    .map-pin {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      background: #c53636;
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 3px 10px rgba(0,0,0,.18);
+    }
+
+    .map-label {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 11px;
+      font-weight: 700;
+      color: #003B73;
+      transform: translateY(-1px);
+    }
+
+    .world-map {
+      position: relative;
+      min-height: 310px;
+      overflow: hidden;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 70% 30%, rgba(23,105,170,.09), transparent 30%),
+        #f4f7fa;
+      border: 1px solid #d8e2ec;
+    }
+
+    .continent {
+      fill: #dce7ef;
+      stroke: #c7d6e2;
+      stroke-width: 1;
+    }
+
+    @media (max-width: 900px) {
+      .approach-card:not(:last-child)::after,
+      .approach-card:not(:last-child)::before {
+        display: none;
+      }
     }
   </style>
 </head>
 
-<body class="bg-white text-slate-800 antialiased">
+<body class="bg-white antialiased">
 
-  <!-- NAVIGATION -->
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
   <header class="fixed inset-x-0 top-0 z-50 border-b border-aicLine/80 bg-white/95 backdrop-blur">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 
-      <a href="#top" class="flex items-center gap-3">
+    <div class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+
+      <a href="#top" class="flex items-center">
         <img
           src="assets/images/brand/aic-logo-official.png"
-          alt="AI Connections logo"
-          class="h-16 w-auto"
+          alt="AI Connections"
+          class="h-12 w-auto"
         >
       </a>
 
-      <nav class="hidden items-center gap-7 text-sm font-medium text-slate-600 lg:flex">
-        <a href="#hero" class="transition hover:text-aicNavy">Home</a>
-        <a href="#what-we-do" class="transition hover:text-aicNavy">What We Do</a>
-        <a href="#intelligent-products" class="transition hover:text-aicNavy">Products</a>
-        <a href="#transformation-approach" class="transition hover:text-aicNavy">Approach</a>
-        <a href="#international-presence" class="transition hover:text-aicNavy">Presence</a>
-        <a href="#insights" class="transition hover:text-aicNavy">Insights</a>
+      <nav class="hidden items-center gap-7 text-sm font-semibold text-slate-600 lg:flex">
+
+        <a href="#hero" class="transition hover:text-aicNavy">
+          Home
+        </a>
+
+        <a href="#what-we-do" class="transition hover:text-aicNavy">
+          What We Do
+        </a>
+
+        <a href="#intelligent-products" class="transition hover:text-aicNavy">
+          Products
+        </a>
+
+        <a href="#transformation-approach" class="transition hover:text-aicNavy">
+          Approach
+        </a>
+
+        <a href="#international-presence" class="transition hover:text-aicNavy">
+          Presence
+        </a>
+
+        <a href="#insights" class="transition hover:text-aicNavy">
+          Insights
+        </a>
 
         <a
           href="contact.html"
@@ -78,15 +200,19 @@
         >
           Talk to an Expert
         </a>
+
       </nav>
 
-      <details class="lg:hidden">
+      <details class="relative lg:hidden">
+
         <summary class="cursor-pointer list-none rounded-full border border-aicLine px-4 py-2 text-sm font-semibold text-aicNavy">
           Menu
         </summary>
 
-        <div class="absolute right-4 top-[4.25rem] w-64 rounded-2xl border border-aicLine bg-white p-4 shadow-panel sm:right-6">
-          <nav class="flex flex-col gap-3 text-sm font-medium text-slate-700">
+        <div class="absolute right-0 top-12 w-64 rounded-2xl border border-aicLine bg-white p-5 shadow-card">
+
+          <nav class="flex flex-col gap-4 text-sm font-semibold text-slate-700">
+
             <a href="#hero">Home</a>
             <a href="#what-we-do">What We Do</a>
             <a href="#intelligent-products">Products</a>
@@ -96,46 +222,48 @@
 
             <a
               href="contact.html"
-              class="mt-2 rounded-full bg-aicNavy px-4 py-2 text-center text-white"
+              class="mt-2 rounded-full bg-aicNavy px-4 py-3 text-center text-white"
             >
               Talk to an Expert
             </a>
+
           </nav>
+
         </div>
+
       </details>
 
     </div>
+
   </header>
 
 
-  <main id="top" class="pt-20">
+  <main id="top" class="pt-[76px]">
 
-    <!-- HERO -->
-    <section
-      id="hero"
-      class="border-b border-aicLine bg-gradient-to-b from-aicMist to-white"
-    >
-      <div
-        class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:py-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] lg:px-8"
-      >
 
-        <div class="space-y-6">
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+    <section id="hero" class="border-b border-aicLine bg-gradient-to-b from-aicMist to-white">
 
-          <div class="space-y-4">
-            <p class="text-3xl font-extrabold uppercase tracking-[0.2em] text-aicNavy md:text-[2rem]">
-              AI CONNECTIONS
-            </p>
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:py-20 lg:grid-cols-[1.08fr_.92fr] lg:px-8">
 
-            <h1 class="max-w-3xl text-5xl font-bold tracking-tight text-aicNavy sm:text-6xl lg:text-7xl">
-              AI. Transformation.
-            </h1>
+        <div class="flex flex-col justify-center">
 
-            <p class="max-w-2xl text-lg leading-8 text-slate-600">
-              Transforming enterprises through AI, deep banking expertise and modern technology.
-            </p>
-          </div>
+          <p class="text-2xl font-extrabold uppercase tracking-[.18em] text-aicNavy md:text-3xl">
+            AI CONNECTIONS
+          </p>
 
-          <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <h1 class="mt-4 max-w-3xl text-5xl font-bold leading-[1.03] tracking-tight text-aicNavy sm:text-6xl lg:text-7xl">
+            AI. Transformation.
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Transforming enterprises through AI, deep banking expertise and modern technology.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+
             <a
               href="contact.html"
               class="inline-flex items-center justify-center rounded-full bg-aicNavy px-6 py-3 text-sm font-semibold text-white transition hover:bg-aicInk"
@@ -156,324 +284,756 @@
             >
               Explore AI Consulting
             </a>
+
           </div>
 
         </div>
 
-        <!-- TRANSFORMATION THESIS -->
-        <div class="rounded-[2rem] border border-aicLine bg-white p-7 shadow-panel sm:p-8">
-          <div class="space-y-5">
 
-            <div class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-aicRed">
-              <div class="h-px flex-1 bg-aicLine"></div>
-              <span>Transformation Thesis</span>
-              <div class="h-px flex-1 bg-aicLine"></div>
+        <div class="flex items-center">
+
+          <div class="w-full rounded-[2rem] border border-aicLine bg-white p-7 shadow-card sm:p-9">
+
+            <div class="flex items-center gap-3">
+
+              <span class="h-px flex-1 bg-aicLine"></span>
+
+              <span class="section-label">
+                Transformation Thesis
+              </span>
+
+              <span class="h-px flex-1 bg-aicLine"></span>
+
             </div>
 
-            <p class="text-2xl font-semibold leading-9 text-aicNavy">
+            <h2 class="mt-7 text-2xl font-semibold leading-9 text-aicNavy">
               Enterprise transformation requires domain, technology and execution discipline in equal measure.
-            </p>
+            </h2>
 
-            <p class="border-l border-aicLine pl-5 text-base leading-7 text-slate-600">
+            <p class="mt-6 border-l-2 border-aicRed pl-5 text-base leading-8 text-slate-600">
               AI Connections operates at that intersection, helping leadership teams translate transformation ambition into reliable outcomes.
             </p>
 
+            <div class="mt-8 grid grid-cols-3 border-t border-aicLine pt-6 text-center">
+
+              <div>
+                <div class="text-2xl font-bold text-aicNavy">AI</div>
+                <div class="mt-1 text-xs text-slate-500">Intelligence</div>
+              </div>
+
+              <div class="border-x border-aicLine">
+                <div class="text-2xl font-bold text-aicNavy">Domain</div>
+                <div class="mt-1 text-xs text-slate-500">Expertise</div>
+              </div>
+
+              <div>
+                <div class="text-2xl font-bold text-aicNavy">Scale</div>
+                <div class="mt-1 text-xs text-slate-500">Execution</div>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- WHAT WE DO -->
-    <section
-      id="what-we-do"
-      class="border-b border-aicLine bg-white py-14"
-    >
+    <!-- =========================================================
+         WHAT WE DO
+    ========================================================== -->
+    <section id="what-we-do" class="border-b border-aicLine bg-white py-16">
+
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div class="mb-8 flex flex-col gap-3 border-b border-aicLine pb-6 lg:flex-row lg:items-end lg:justify-between">
+        <div class="mb-9 flex flex-col gap-4 border-b border-aicLine pb-7 lg:flex-row lg:items-end lg:justify-between">
 
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
+
+            <p class="section-label">
               What We Do
             </p>
 
-            <h2 class="mt-2 text-3xl font-bold text-aicNavy sm:text-4xl">
+            <h2 class="section-title mt-3 text-3xl sm:text-4xl">
               Integrated capabilities for enterprise transformation.
             </h2>
+
           </div>
 
-          <p class="max-w-2xl text-base leading-7 text-slate-600">
+          <p class="max-w-xl text-base leading-7 text-slate-600">
             A unified model across banking, AI consulting and enterprise technology services.
           </p>
 
         </div>
 
-        <div class="grid gap-5 lg:grid-cols-3">
 
-          <article class="flex h-full flex-col rounded-[1.75rem] border border-aicLine bg-aicMist/45 p-7">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-            <h3 class="mt-3 text-2xl font-semibold text-aicNavy">Banking</h3>
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              Domain-led transformation support across core platform modernization, AI adoption and digital execution.
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+          <article class="rounded-[1.5rem] border border-aicLine bg-aicMist/60 p-7">
+            <p class="section-label">Capability</p>
+            <h3 class="mt-4 text-2xl font-semibold text-aicNavy">Banking</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Domain-led transformation across core platforms, AI adoption and digital execution.
             </p>
           </article>
 
-          <article class="flex h-full flex-col rounded-[1.75rem] border border-aicLine bg-white p-7 shadow-panel">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-            <h3 class="mt-3 text-2xl font-semibold text-aicNavy">AI Consulting</h3>
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              Enterprise advisory and delivery for strategy, generative AI, intelligent automation and scaled intelligence.
+
+          <article class="rounded-[1.5rem] border border-aicLine bg-white p-7 shadow-soft">
+            <p class="section-label">Capability</p>
+            <h3 class="mt-4 text-2xl font-semibold text-aicNavy">AI Consulting</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Strategy, generative AI, intelligent automation and enterprise AI delivery.
             </p>
           </article>
 
-          <article class="flex h-full flex-col rounded-[1.75rem] border border-aicLine bg-aicMist/45 p-7">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-            <h3 class="mt-3 text-2xl font-semibold text-aicNavy">Enterprise Technology</h3>
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              Temenos • SAP • Salesforce • Enterprise Integration • Cybersecurity.
+
+          <article class="rounded-[1.5rem] border border-aicLine bg-aicMist/60 p-7">
+            <p class="section-label">Capability</p>
+            <h3 class="mt-4 text-2xl font-semibold text-aicNavy">
+              Enterprise Technology
+            </h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Temenos, SAP, Salesforce, enterprise integration and cybersecurity.
             </p>
           </article>
 
-          <article class="flex h-full flex-col rounded-[1.75rem] border border-aicLine bg-white p-7 shadow-panel">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-            <h3 class="mt-3 text-2xl font-semibold text-aicNavy">Palantir Services</h3>
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              T&amp;M services across Palantir Foundry and AIP, including data engineering, ontology, applications, AI workflows and platform engineering.
+
+          <article class="rounded-[1.5rem] border border-aicLine bg-white p-7 shadow-soft">
+            <p class="section-label">Capability</p>
+            <h3 class="mt-4 text-2xl font-semibold text-aicNavy">
+              Palantir Services
+            </h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              T&amp;M services across Foundry and AIP, including data engineering, ontology, applications, AI workflows and platform engineering.
             </p>
           </article>
 
-          <article class="flex h-full flex-col rounded-[1.75rem] border border-aicLine bg-aicMist/45 p-7">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-aicRed">Capability</p>
-            <h3 class="mt-3 text-2xl font-semibold text-aicNavy">Legacy Modernisation</h3>
-            <p class="mt-3 text-base leading-7 text-slate-600">
-              Modernise legacy applications, architectures and integrations with cloud, APIs, data and AI-enabled engineering.
+
+          <article class="rounded-[1.5rem] border border-aicLine bg-aicMist/60 p-7">
+            <p class="section-label">Capability</p>
+            <h3 class="mt-4 text-2xl font-semibold text-aicNavy">
+              Legacy Modernisation
+            </h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Modernise applications and integrations using cloud, APIs, data and AI-enabled engineering.
             </p>
           </article>
 
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- INTELLIGENT PRODUCTS -->
-    <section
-      id="intelligent-products"
-      class="border-b border-aicLine bg-aicNavy py-14 text-white"
-    >
+    <!-- =========================================================
+         INTELLIGENT PRODUCTS
+    ========================================================== -->
+    <section id="intelligent-products" class="border-b border-aicNavy/20 bg-aicNavy py-16 text-white">
+
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div class="mb-8 border-b border-white/15 pb-6">
-          <h2 class="text-3xl font-bold uppercase tracking-[0.14em] sm:text-4xl">
-            INTELLIGENT PRODUCTS
-          </h2>
+        <div class="mb-9 flex flex-col gap-3 border-b border-white/15 pb-7 sm:flex-row sm:items-end sm:justify-between">
 
-          <p class="mt-2 text-lg text-white/75">
-            Intelligent solution portfolio.
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[.28em] text-red-300">
+              Intelligent Products
+            </p>
+
+            <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+              AI-powered products built for real-world outcomes.
+            </h2>
+          </div>
+
+          <p class="max-w-lg text-sm leading-7 text-white/65">
+            Productised intelligence designed around specific enterprise and industry problems.
           </p>
+
         </div>
+
 
         <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
 
-          <article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-7">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Product 01</p>
-            <h3 class="mt-6 text-3xl font-semibold">Catch IQ</h3>
-            <p class="mt-2 text-base leading-7 text-white/75">
-              AI Fishing Decision Intelligence
+          <article class="group rounded-[1.5rem] border border-white/15 bg-white/[.06] p-7 transition hover:bg-white/[.10]">
+
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold uppercase tracking-[.22em] text-white/50">
+                01
+              </span>
+
+              <span class="text-sm text-red-300">AI</span>
+            </div>
+
+            <h3 class="mt-10 text-2xl font-semibold">
+              Catch IQ
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-white/65">
+              AI Fishing Decision Intelligence.
             </p>
+
           </article>
 
-          <article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-7">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Product 02</p>
-            <h3 class="mt-6 text-3xl font-semibold">Verify / KYC</h3>
-            <p class="mt-2 text-base leading-7 text-white/75">
-              AI-Powered KYC &amp; Customer Identity Intelligence
+
+          <article class="group rounded-[1.5rem] border border-white/15 bg-white/[.06] p-7 transition hover:bg-white/[.10]">
+
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold uppercase tracking-[.22em] text-white/50">
+                02
+              </span>
+
+              <span class="text-sm text-red-300">KYC</span>
+            </div>
+
+            <h3 class="mt-10 text-2xl font-semibold">
+              Verify / KYC
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-white/65">
+              AI-Powered KYC &amp; Customer Identity Intelligence.
             </p>
+
           </article>
 
-          <article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-7">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Product 03</p>
-            <h3 class="mt-6 text-3xl font-semibold">IntelliSight</h3>
-            <p class="mt-2 text-base leading-7 text-white/75">
-              AI-Powered Enterprise Asset Intelligence Platform
+
+          <article class="group rounded-[1.5rem] border border-white/15 bg-white/[.06] p-7 transition hover:bg-white/[.10]">
+
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold uppercase tracking-[.22em] text-white/50">
+                03
+              </span>
+
+              <span class="text-sm text-red-300">EWS</span>
+            </div>
+
+            <h3 class="mt-10 text-2xl font-semibold">
+              IntelliSight
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-white/65">
+              AI-Powered Enterprise Asset Intelligence Platform.
             </p>
+
           </article>
 
-          <article class="rounded-[1.75rem] border border-white/15 bg-white/5 p-7">
-            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Product 04</p>
-            <h3 class="mt-6 text-3xl font-semibold">Accelerate</h3>
-            <p class="mt-2 text-base leading-7 text-white/75">
-              AI-Powered Application Modernisation
+
+          <article class="group rounded-[1.5rem] border border-white/15 bg-white/[.06] p-7 transition hover:bg-white/[.10]">
+
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold uppercase tracking-[.22em] text-white/50">
+                04
+              </span>
+
+              <span class="text-sm text-red-300">Modernise</span>
+            </div>
+
+            <h3 class="mt-10 text-2xl font-semibold">
+              Accelerate
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-white/65">
+              AI-Powered Application Modernisation.
             </p>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- TRANSFORMATION APPROACH -->
-    <section
-      id="transformation-approach"
-      class="border-b border-aicLine bg-white py-14"
-    >
+    <!-- =========================================================
+         TRANSFORMATION APPROACH
+    ========================================================== -->
+    <section id="transformation-approach" class="border-b border-aicLine bg-white py-16">
+
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div class="mb-8 border-b border-aicLine pb-6">
-          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
+        <div class="mb-10">
+
+          <p class="section-label">
             Transformation Approach
           </p>
 
-          <h2 class="mt-2 text-3xl font-bold text-aicNavy sm:text-4xl">
-            A connected transformation framework.
-          </h2>
-        </div>
+          <div class="mt-3 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
 
-        <div class="rounded-[2rem] border border-aicLine bg-aicMist/45 p-6 sm:p-8">
+            <h2 class="section-title text-3xl sm:text-4xl">
+              From business problem to scaled AI.
+            </h2>
 
-          <div class="flex flex-col gap-3 text-center text-lg font-semibold text-aicNavy md:flex-row md:flex-wrap md:items-center md:justify-center md:text-xl">
-
-            <span class="rounded-full border border-aicLine bg-white px-6 py-3">
-              Strategy
-            </span>
-
-            <span class="hidden text-aicRed md:inline">→</span>
-
-            <span class="rounded-full border border-aicLine bg-white px-6 py-3">
-              Design
-            </span>
-
-            <span class="hidden text-aicRed md:inline">→</span>
-
-            <span class="rounded-full border border-aicLine bg-white px-6 py-3">
-              Transform
-            </span>
-
-            <span class="hidden text-aicRed md:inline">→</span>
-
-            <span class="rounded-full border border-aicLine bg-white px-6 py-3">
-              Intelligent
-            </span>
-
-            <span class="hidden text-aicRed md:inline">→</span>
-
-            <span class="rounded-full border border-aicLine bg-white px-6 py-3">
-              Optimize
-            </span>
+            <p class="max-w-xl text-sm leading-7 text-slate-600">
+              A practical transformation model that combines strategy, data, technology, pilots, people and continuous optimisation.
+            </p>
 
           </div>
 
-          <p class="mt-6 text-center text-sm font-medium uppercase tracking-[0.24em] text-slate-500">
-            Strategy → Design → Transform → Intelligent → Optimize
+        </div>
+
+
+        <!-- TOP LINE -->
+        <div class="mb-7 hidden h-1 rounded-full approach-line lg:block"></div>
+
+
+        <!-- APPROACH CARDS -->
+        <div class="grid gap-5 lg:grid-cols-6">
+
+          <!-- 01 -->
+          <article class="approach-card rounded-[1.5rem] border border-aicLine bg-aicMist/55 p-6">
+
+            <div class="flex items-center justify-between">
+
+              <span class="text-4xl font-extrabold text-aicNavy/15">
+                01
+              </span>
+
+              <span class="text-xs font-bold uppercase tracking-widest text-aicRed">
+                Define
+              </span>
+
+            </div>
+
+            <h3 class="mt-7 text-lg font-bold text-aicNavy">
+              Business Strategy
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Identify business priorities, value pools and the right AI opportunities.
+            </p>
+
+          </article>
+
+
+          <!-- 02 -->
+          <article class="approach-card rounded-[1.5rem] border border-aicLine bg-white p-6 shadow-soft">
+
+            <div class="flex items-center justify-between">
+
+              <span class="text-4xl font-extrabold text-aicNavy/15">
+                02
+              </span>
+
+              <span class="text-xs font-bold uppercase tracking-widest text-aicRed">
+                Prepare
+              </span>
+
+            </div>
+
+            <h3 class="mt-7 text-lg font-bold text-aicNavy">
+              Data &amp; Governance
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Assess data, architecture, governance, security and readiness.
+            </p>
+
+          </article>
+
+
+          <!-- 03 -->
+          <article class="approach-card rounded-[1.5rem] border border-aicLine bg-aicMist/55 p-6">
+
+            <div class="flex items-center justify-between">
+
+              <span class="text-4xl font-extrabold text-aicNavy/15">
+                03
+              </span>
+
+              <span class="text-xs font-bold uppercase tracking-widest text-aicRed">
+                Design
+              </span>
+
+            </div>
+
+            <h3 class="mt-7 text-lg font-bold text-aicNavy">
+              AI Solution
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Select models, platforms, architecture and the operating approach.
+            </p>
+
+          </article>
+
+
+          <!-- 04 -->
+          <article class="approach-card rounded-[1.5rem] border border-aicLine bg-white p-6 shadow-soft">
+
+            <div class="flex items-center justify-between">
+
+              <span class="text-4xl font-extrabold text-aicNavy/15">
+                04
+              </span>
+
+              <span class="text-xs font-bold uppercase tracking-widest text-aicRed">
+                Prove
+              </span>
+
+            </div>
+
+            <h3 class="mt-7 text-lg font-bold text-aicNavy">
+              Pilot &amp; Validate
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Run focused pilots, measure outcomes and prove business value.
+            </p>
+
+          </article>
+
+
+          <!-- 05 -->
+          <article class="approach-card rounded-[1.5rem] border border-aicLine bg-aicMist/55 p-6">
+
+            <div class="flex items-center justify-between">
+
+              <span class="text-4xl font-extrabold text-aicNavy/15">
+                05
+              </span>
+
+              <span class="text-xs font-bold uppercase tracking-widest text-aicRed">
+                Enable
+              </span>
+
+            </div>
+
+            <h3 class="mt-7 text-lg font-bold text-aicNavy">
+              Build &amp; Train
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Build the AI capability, train teams and establish adoption practices.
+            </p>
+
+          </article>
+
+
+          <!-- 06 -->
+          <article class="approach-card rounded-[1.5rem] border border-aicLine bg-white p-6 shadow-soft">
+
+            <div class="flex items-center justify-between">
+
+              <span class="text-4xl font-extrabold text-aicNavy/15">
+                06
+              </span>
+
+              <span class="text-xs font-bold uppercase tracking-widest text-aicRed">
+                Scale
+              </span>
+
+            </div>
+
+            <h3 class="mt-7 text-lg font-bold text-aicNavy">
+              Scale &amp; Optimise
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Scale proven solutions, monitor performance and continuously improve.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <!-- METHOD STRIP -->
+        <div class="mt-8 rounded-[1.5rem] bg-aicNavy px-6 py-5 text-center">
+
+          <p class="text-xs font-bold uppercase tracking-[.25em] text-white/50">
+            Our Method
+          </p>
+
+          <p class="mt-2 text-base font-semibold text-white sm:text-lg">
+            Strategy
+            <span class="mx-2 text-red-300">→</span>
+            Data
+            <span class="mx-2 text-red-300">→</span>
+            Design
+            <span class="mx-2 text-red-300">→</span>
+            Pilot
+            <span class="mx-2 text-red-300">→</span>
+            Train
+            <span class="mx-2 text-red-300">→</span>
+            Scale
           </p>
 
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- INTERNATIONAL PRESENCE -->
-    <section
-      id="international-presence"
-      class="border-b border-aicLine bg-white py-8"
-    >
+    <!-- =========================================================
+         INTERNATIONAL PRESENCE
+    ========================================================== -->
+    <section id="international-presence" class="border-b border-aicLine bg-white py-16">
+
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div class="rounded-[1.75rem] border border-aicLine bg-aicMist/45 px-6 py-6 sm:px-8">
-          <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+        <div class="mb-9">
 
-            <div>
-              <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
-                International Presence
-              </p>
+          <p class="section-label">
+            International Presence
+          </p>
 
-              <h2 class="mt-2 text-2xl font-bold text-aicNavy sm:text-3xl">
-                Global delivery network
-              </h2>
-            </div>
+          <h2 class="section-title mt-3 text-3xl sm:text-4xl">
+            Global delivery. Local execution.
+          </h2>
 
-            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-base font-semibold text-aicNavy">
-              <span>India</span>
-              <span class="text-aicLine">•</span>
-              <span>Middle East</span>
-              <span class="text-aicLine">•</span>
-              <span>Europe</span>
-              <span class="text-aicLine">•</span>
-              <span>Americas</span>
+        </div>
+
+
+        <div class="grid overflow-hidden rounded-[2rem] border border-aicLine bg-aicMist/45 lg:grid-cols-[.38fr_.62fr]">
+
+
+          <!-- LEFT: REGIONS -->
+          <div class="flex flex-col justify-center border-b border-aicLine p-8 sm:p-10 lg:border-b-0 lg:border-r">
+
+            <p class="text-sm leading-7 text-slate-600">
+              A distributed delivery network supporting clients across key global markets.
+            </p>
+
+
+            <div class="mt-8 space-y-5">
+
+              <div class="flex items-center gap-4">
+                <span class="h-2.5 w-2.5 rounded-full bg-aicRed"></span>
+                <span class="text-xl font-semibold text-aicNavy">India</span>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="h-2.5 w-2.5 rounded-full bg-aicRed"></span>
+                <span class="text-xl font-semibold text-aicNavy">UAE</span>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="h-2.5 w-2.5 rounded-full bg-aicRed"></span>
+                <span class="text-xl font-semibold text-aicNavy">Europe</span>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="h-2.5 w-2.5 rounded-full bg-aicRed"></span>
+                <span class="text-xl font-semibold text-aicNavy">Americas</span>
+              </div>
+
             </div>
 
           </div>
+
+
+          <!-- RIGHT: WORLD MAP -->
+          <div class="p-5 sm:p-8">
+
+            <div class="world-map">
+
+
+              <!-- SIMPLE WORLD MAP -->
+              <svg
+                viewBox="0 0 900 360"
+                class="absolute inset-0 h-full w-full"
+                preserveAspectRatio="xMidYMid meet"
+                aria-label="Global delivery network map"
+              >
+
+                <!-- North America -->
+                <path
+                  class="continent"
+                  d="M105 72 L145 42 L218 55 L250 83 L238 113 L207 121 L188 153 L151 145 L132 121 L98 112 Z"
+                />
+
+                <!-- South America -->
+                <path
+                  class="continent"
+                  d="M247 166 L274 184 L286 221 L271 263 L250 302 L228 275 L235 235 L220 202 Z"
+                />
+
+                <!-- Europe -->
+                <path
+                  class="continent"
+                  d="M421 86 L455 72 L491 84 L500 105 L480 119 L450 113 L430 104 Z"
+                />
+
+                <!-- Africa -->
+                <path
+                  class="continent"
+                  d="M430 125 L476 130 L498 160 L489 207 L463 255 L431 230 L414 189 L420 151 Z"
+                />
+
+                <!-- Asia -->
+                <path
+                  class="continent"
+                  d="M492 77 L550 57 L622 67 L688 96 L720 127 L689 154 L636 148 L594 131 L553 139 L520 118 Z"
+                />
+
+                <!-- India -->
+                <path
+                  class="continent"
+                  d="M584 145 L612 151 L626 177 L611 202 L591 182 L580 161 Z"
+                />
+
+                <!-- Australia -->
+                <path
+                  class="continent"
+                  d="M687 236 L736 224 L779 243 L771 273 L723 284 L690 266 Z"
+                />
+
+                <!-- Ocean route -->
+                <path
+                  d="M185 105 C330 30 470 45 600 135 C675 188 708 208 742 250"
+                  fill="none"
+                  stroke="#1769AA"
+                  stroke-width="2"
+                  stroke-dasharray="6 8"
+                  opacity=".35"
+                />
+
+              </svg>
+
+
+              <!-- CHENNAI -->
+              <div class="map-pin" style="left:66%;top:48%;"></div>
+              <div class="map-label" style="left:68%;top:44%;">
+                Chennai
+              </div>
+
+
+              <!-- DUBAI -->
+              <div class="map-pin" style="left:59%;top:39%;"></div>
+              <div class="map-label" style="left:61%;top:35%;">
+                Dubai
+              </div>
+
+
+              <!-- BUCHAREST -->
+              <div class="map-pin" style="left:53%;top:27%;"></div>
+              <div class="map-label" style="left:55%;top:23%;">
+                Bucharest
+              </div>
+
+
+              <!-- DETROIT -->
+              <div class="map-pin" style="left:24%;top:27%;"></div>
+              <div class="map-label" style="left:26%;top:23%;">
+                Detroit
+              </div>
+
+
+              <div class="absolute bottom-5 left-5 rounded-full border border-aicLine bg-white/90 px-4 py-2 text-xs font-semibold text-slate-500 backdrop-blur">
+                Global Delivery Network
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- INSIGHTS -->
-    <section
-      id="insights"
-      class="border-b border-aicLine bg-white py-14"
-    >
+    <!-- =========================================================
+         INSIGHTS
+    ========================================================== -->
+    <section id="insights" class="border-b border-aicLine bg-white py-16">
+
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div class="mb-8 border-b border-aicLine pb-6">
-          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-aicRed">
+        <div class="mb-9 border-b border-aicLine pb-7">
+
+          <p class="section-label">
             Insights
           </p>
 
-          <h2 class="mt-2 text-3xl font-bold text-aicNavy sm:text-4xl">
+          <h2 class="section-title mt-3 text-3xl sm:text-4xl">
             Executive perspectives for enterprise change.
           </h2>
+
         </div>
 
-        <div class="grid gap-6 lg:grid-cols-3">
 
-          <article class="border-t border-aicNavy pt-5">
-            <h3 class="text-2xl font-semibold text-aicNavy">
+        <div class="grid gap-8 lg:grid-cols-3">
+
+          <article class="border-t-2 border-aicNavy pt-5">
+
+            <span class="text-xs font-bold uppercase tracking-[.2em] text-aicRed">
+              Banking
+            </span>
+
+            <h3 class="mt-3 text-xl font-semibold text-aicNavy">
               Banking Transformation
             </h3>
 
-            <p class="mt-3 text-base leading-7 text-slate-600">
+            <p class="mt-3 text-sm leading-7 text-slate-600">
               Program sequencing, control models and operating transformations for banks.
             </p>
+
           </article>
 
-          <article class="border-t border-aicNavy pt-5">
-            <h3 class="text-2xl font-semibold text-aicNavy">
+
+          <article class="border-t-2 border-aicNavy pt-5">
+
+            <span class="text-xs font-bold uppercase tracking-[.2em] text-aicRed">
+              AI
+            </span>
+
+            <h3 class="mt-3 text-xl font-semibold text-aicNavy">
               AI &amp; Enterprise Intelligence
             </h3>
 
-            <p class="mt-3 text-base leading-7 text-slate-600">
+            <p class="mt-3 text-sm leading-7 text-slate-600">
               Practical pathways from AI ambition to measurable enterprise value.
             </p>
+
           </article>
 
-          <article class="border-t border-aicNavy pt-5">
-            <h3 class="text-2xl font-semibold text-aicNavy">
+
+          <article class="border-t-2 border-aicNavy pt-5">
+
+            <span class="text-xs font-bold uppercase tracking-[.2em] text-aicRed">
+              Technology
+            </span>
+
+            <h3 class="mt-3 text-xl font-semibold text-aicNavy">
               Technology Transformation
             </h3>
 
-            <p class="mt-3 text-base leading-7 text-slate-600">
+            <p class="mt-3 text-sm leading-7 text-slate-600">
               Architecture, integration and platform decisions for resilient enterprise change.
             </p>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- FINAL CTA -->
+    <!-- =========================================================
+         FINAL CTA
+    ========================================================== -->
     <section class="bg-aicNavy py-16 text-white">
+
       <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
 
-        <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">
+        <p class="text-xs font-bold uppercase tracking-[.3em] text-red-300">
+          AI Connections
+        </p>
+
+        <h2 class="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
           Let’s transform what’s next.
         </h2>
 
-        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/75">
-          AI Connections helps global enterprises move from transformation intent to sustained outcomes.
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/70">
+          Move from transformation intent to sustained enterprise outcomes.
         </p>
 
         <a
@@ -484,49 +1044,55 @@
         </a>
 
       </div>
+
     </section>
 
   </main>
 
 
-  <!-- FOOTER -->
-  <footer class="border-t border-white/10 bg-[#081528] py-8 text-white">
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="bg-[#081528] py-9 text-white">
 
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-7 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
 
       <div>
+
         <img
           src="assets/images/brand/aic-logo-official.png"
-          alt="AI Connections logo"
+          alt="AI Connections"
           class="h-10 w-auto"
         >
 
-        <p class="mt-3 max-w-md text-sm leading-7 text-white/65">
+        <p class="mt-3 max-w-md text-sm leading-6 text-white/60">
           AI Connections delivers enterprise transformation through banking expertise, AI consulting and modern technology execution.
         </p>
+
       </div>
 
-      <div class="space-y-2 text-sm text-white/65">
+
+      <div class="text-sm text-white/60">
 
         <p>
           <a
             href="mailto:Rajesh@aiconnections.com"
-            class="transition hover:text-white"
+            class="hover:text-white"
           >
             Rajesh@aiconnections.com
           </a>
         </p>
 
-        <p>
+        <p class="mt-2">
           <a
             href="tel:+919841940011"
-            class="transition hover:text-white"
+            class="hover:text-white"
           >
             +91 9841940011
           </a>
         </p>
 
-        <p>
+        <p class="mt-2">
           © 2026 AI Connections. All rights reserved.
         </p>
 
